@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      {# This is the base template for the site–other templates extend this one
+      #}
+      <meta charset="utf-8" />
+      <link rel="icon" type="image/png" href="/favicon.png" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>lstep.xyz</title>
+      <meta name="description" content="A site by lstep" />
+      <link rel="stylesheet" type="text/css" href="/css/style.css" />
+      <!-- Removed SEO tag -->
+   </head>
+   <body class="{{ templateClass }}">
+      <h1><a href="/">lstep.xyz</a></h1>
+      <main>
+         {# Page or post content will appear here #}
+         {{ content | safe }}
+         <footer class="footer">
+            <div class="links">
+               <a href="/posts">Archive</a>
+               <span class="divider">|</span>
+               <a href="/uses">Uses</a>
+               <span class="divider">|</span>
+               <a href="/colophon">Colophon</a>
+               <span class="divider">|</span>
+               <a href="https://lstep.xyz/feed.xml"
+                  >Feed</a>
+            </div>
+
+            <p>
+               Built with
+               <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a> |
+               Licensed under
+               <a
+   				href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1"
+                  >CC BY-SA 4.0</a
+               >
+            </p>
+         </footer>
+      </main>
+   </body>
+</html>
